@@ -117,7 +117,7 @@ export default function Home() {
         </h1>
         <section
           className="w-full flex flex-wrap gap-2 px-2 justify-center"
-          id="projects"
+          id="contact"
         >
           <form className="w-9/12 rounded shadow p-2">
             <div className="flex flex-col gap-2">
