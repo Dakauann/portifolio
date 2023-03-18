@@ -23,7 +23,7 @@ export default function Home() {
             <img
               src="https://avatars.githubusercontent.com/u/74578069?v=4"
               alt="Dakauann"
-              className="lg:w-2/4 w-3/4 circle-square-cicle mx-auto"
+              className="lg:w-2/4 w-3/4 rounded-full mx-auto"
             />
           </div>
         </header>
