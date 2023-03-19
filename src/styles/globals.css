@@ -3,41 +3,42 @@
 @tailwind utilities;
 
 @keyframes CircleThenRoundedSquareCicle {
-  0% {
-    border-radius: 50%;
-    border: 2px solid var(--color-primary);
-    transform: translateY(0);
-  }
-  25% {
-    border-radius: 0 50% 0 50%;
-    border: 0.5px solid var(--color-primary);
-    transform: translateY(-10%);
-  }
-  50% {
-    border-radius: 50% 0 50% 0;
-    border: 0.5px solid var(--color-primary);
-    transform: translateY(0);
-  }
-  75% {
-    border-radius: 0 50% 0 50%;
-    border: 0.5px solid var(--color-primary);
-    transform: translateY(10%);
-  }
-  100% {
-    border-radius: 50%;
-    border: 2px solid var(--color-primary);
-    transform: translateY(0);
-  }
+	0% {
+		border-radius: 50%;
+		border: 2px solid var(--color-primary);
+		transform: translateY(0);
+	}
+	25% {
+		border-radius: 0 50% 0 50%;
+		border: 0.5px solid var(--color-primary);
+		transform: translateY(-10%);
+	}
+	50% {
+		border-radius: 50% 0 50% 0;
+		border: 0.5px solid var(--color-primary);
+		transform: translateY(0);
+	}
+	75% {
+		border-radius: 0 50% 0 50%;
+		border: 0.5px solid var(--color-primary);
+		transform: translateY(10%);
+	}
+	100% {
+		border-radius: 50%;
+		border: 2px solid var(--color-primary);
+		transform: translateY(0);
+	}
 }
 
 :root {
-  --color-primary-values: 357, 92%;
+	--color-primary-values: 357, 92%;
 }
 
 * {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
 }
 
 .circle-square-cicle {
-  animation: CircleThenRoundedSquareCicle 10s ease-in-out infinite;
+	animation: CircleThenRoundedSquareCicle 10s ease-in-out infinite;
 }
