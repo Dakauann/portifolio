@@ -1,13 +1,37 @@
 import Head from "next/head";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import Script from "next/script";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.hsforms.net/forms/v2.js";
+    document.body.appendChild(script);
+    script.addEventListener("load", () => {
+      // @ts-ignore
+      if (window.hbspt) {
+        // @ts-ignore
+        window.hbspt.forms.create({
+          portalId: "24295383",
+          formId: "8577dd74-98c7-4979-8293-77dc2b51caf1",
+          target: "#contact",
+        });
+      }
+    });
+  }, []);
   return (
     <>
       <Head>
         <title>Dakauann.DEV</title>
         <meta name="description" content="Personal portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <Script
+          charSet="utf-8"
+          type="text/javascript"
+          src="//js.hsforms.net/forms/embed/v2.js"
+        />
       </Head>
       <main>
         <header className="w-full h-96 flex gap-2 items-center mt-20">
@@ -115,48 +139,9 @@ export default function Home() {
           Contact -{">"}
         </h1>
         <section
-          className="w-full flex flex-wrap gap-2 px-2 justify-center"
+          className="w-9/12 mx-auto mt-10 flex flex-wrap gap-2 px-2 justify-center"
           id="contact"
-        >
-          <form className="w-9/12 rounded shadow p-2">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="uppercase text-lg font-bold">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="input-flushed py-3"
-                placeholder="Your name"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="uppercase text-lg font-bold">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="input-flushed py-3"
-                placeholder="Your email"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="uppercase text-lg font-bold">
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="input-outline h-72"
-                placeholder="Your message"
-              />
-            </div>
-            <button className="btn mt-2">Send</button>
-          </form>
-        </section>
+        />
       </main>
     </>
   );
